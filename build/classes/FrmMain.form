@@ -156,8 +156,8 @@
         <Container class="javax.swing.JPanel" name="jPanel2">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Vegenere">
-                <Property name="tabTitle" type="java.lang.String" value="Vegenere"/>
+              <JTabbedPaneConstraints tabName="Vigenere">
+                <Property name="tabTitle" type="java.lang.String" value="Vigenere"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -197,18 +197,22 @@
                                   <Component id="jLabel7" min="-2" pref="56" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txtvanban1" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
-                                      <Component id="txtkhoa1" alignment="0" min="-2" pref="171" max="-2" attributes="0"/>
+                                      <Component id="txtvanbanVeg" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="btngiaima1" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                          <Component id="btnmahoa1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtkhoaVeg" min="-2" pref="171" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="btnRandomKey" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="txtmahoa1" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="btngiaimaVeg" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                          <Component id="btnmahoaVeg" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="txtmahoaVeg" alignment="0" min="-2" pref="235" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="52" max="32767" attributes="0"/>
+                          <EmptySpace pref="18" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -218,22 +222,23 @@
                           <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtvanban1" alignment="0" min="-2" pref="54" max="-2" attributes="0"/>
+                              <Component id="txtvanbanVeg" alignment="0" min="-2" pref="54" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtkhoa1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtkhoaVeg" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnRandomKey" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtmahoa1" min="-2" pref="54" max="-2" attributes="0"/>
+                              <Component id="txtmahoaVeg" min="-2" pref="54" max="-2" attributes="0"/>
                               <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btngiaima1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnmahoa1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btngiaimaVeg" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnmahoaVeg" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="110" max="32767" attributes="0"/>
                       </Group>
@@ -241,25 +246,25 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="btnmahoa1">
+                <Component class="javax.swing.JButton" name="btnmahoaVeg">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="M&#xe3; H&#xf3;a"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnmahoa1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnmahoaVegActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="btngiaima1">
+                <Component class="javax.swing.JButton" name="btngiaimaVeg">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Gi&#x1ea3;i M&#xe3; "/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btngiaima1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btngiaimaVegActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtmahoa1">
+                <Component class="javax.swing.JTextField" name="txtmahoaVeg">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtmahoa1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtmahoaVegActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel5">
@@ -277,11 +282,19 @@
                     <Property name="text" type="java.lang.String" value="B&#x1ea3;n M&#xe3; :"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtkhoa1">
+                <Component class="javax.swing.JTextField" name="txtkhoaVeg">
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtvanban1">
+                <Component class="javax.swing.JTextField" name="txtvanbanVeg">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtvanban1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtvanbanVegActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnRandomKey">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Random Key"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRandomKeyActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>

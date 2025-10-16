@@ -1,4 +1,5 @@
 
+import static java.awt.SystemColor.text;
 import javax.swing.JOptionPane;
 
 /*
@@ -44,14 +45,15 @@ public class FrmMain extends javax.swing.JFrame {
         txtvanban = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        btnmahoa1 = new javax.swing.JButton();
-        btngiaima1 = new javax.swing.JButton();
-        txtmahoa1 = new javax.swing.JTextField();
+        btnmahoaVeg = new javax.swing.JButton();
+        btngiaimaVeg = new javax.swing.JButton();
+        txtmahoaVeg = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        txtkhoa1 = new javax.swing.JTextField();
-        txtvanban1 = new javax.swing.JTextField();
+        txtkhoaVeg = new javax.swing.JTextField();
+        txtvanbanVeg = new javax.swing.JTextField();
+        btnRandomKey = new javax.swing.JButton();
 
         jTextField1.setText("jTextField1");
 
@@ -127,23 +129,23 @@ public class FrmMain extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Caesar", jPanel1);
 
-        btnmahoa1.setText("Mã Hóa");
-        btnmahoa1.addActionListener(new java.awt.event.ActionListener() {
+        btnmahoaVeg.setText("Mã Hóa");
+        btnmahoaVeg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnmahoa1ActionPerformed(evt);
+                btnmahoaVegActionPerformed(evt);
             }
         });
 
-        btngiaima1.setText("Giải Mã ");
-        btngiaima1.addActionListener(new java.awt.event.ActionListener() {
+        btngiaimaVeg.setText("Giải Mã ");
+        btngiaimaVeg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btngiaima1ActionPerformed(evt);
+                btngiaimaVegActionPerformed(evt);
             }
         });
 
-        txtmahoa1.addActionListener(new java.awt.event.ActionListener() {
+        txtmahoaVeg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtmahoa1ActionPerformed(evt);
+                txtmahoaVegActionPerformed(evt);
             }
         });
 
@@ -153,9 +155,16 @@ public class FrmMain extends javax.swing.JFrame {
 
         jLabel7.setText("Bản Mã :");
 
-        txtvanban1.addActionListener(new java.awt.event.ActionListener() {
+        txtvanbanVeg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtvanban1ActionPerformed(evt);
+                txtvanbanVegActionPerformed(evt);
+            }
+        });
+
+        btnRandomKey.setText("Random Key");
+        btnRandomKey.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRandomKeyActionPerformed(evt);
             }
         });
 
@@ -172,14 +181,17 @@ public class FrmMain extends javax.swing.JFrame {
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtvanban1, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtkhoa1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtvanbanVeg, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(btngiaima1)
+                                .addComponent(txtkhoaVeg, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnRandomKey))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(btngiaimaVeg)
                                 .addGap(29, 29, 29)
-                                .addComponent(btnmahoa1))
-                            .addComponent(txtmahoa1, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(52, Short.MAX_VALUE))
+                                .addComponent(btnmahoaVeg))
+                            .addComponent(txtmahoaVeg, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -187,19 +199,20 @@ public class FrmMain extends javax.swing.JFrame {
                 .addGap(49, 49, 49)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
-                    .addComponent(txtvanban1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtvanbanVeg, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(txtkhoa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                    .addComponent(txtkhoaVeg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRandomKey))
+                .addGap(29, 29, 29)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtmahoa1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtmahoaVeg, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
                 .addGap(32, 32, 32)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btngiaima1)
-                    .addComponent(btnmahoa1))
+                    .addComponent(btngiaimaVeg)
+                    .addComponent(btnmahoaVeg))
                 .addGap(0, 110, Short.MAX_VALUE))
         );
 
@@ -220,7 +233,7 @@ public class FrmMain extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Vegenere", jPanel2);
+        jTabbedPane1.addTab("Vigenere", jPanel2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -239,6 +252,7 @@ public class FrmMain extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // Caesar
 // Phương thức Mã Hóa từng ký tự với khóa K
 char mahoakt(char c, int k)
 {
@@ -277,23 +291,104 @@ private String mahoa(String br, int k)
         String br = this.txtmahoa.getText();
         this.txtvanban.setText(mahoa(br,-k));      
     }//GEN-LAST:event_btngiaimaActionPerformed
-
-    private void btnmahoa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmahoa1ActionPerformed
+    
+    // Vigenere
+    private void btnmahoaVegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmahoaVegActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnmahoa1ActionPerformed
+         // Lấy dữ liệu từ giao diện
+    String text = txtvanbanVeg.getText().toUpperCase();
+    String key = txtkhoaVeg.getText().toUpperCase();
+    StringBuilder result = new StringBuilder();
+    
+    // Nếu người dùng chưa nhập đủ
+    if (text.isEmpty() || key.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Vui lòng nhập văn bản và khóa!");
+        return;
+    }
+    
+      // Biến đếm vị trí ký tự khóa
+    int keyIndex = 0;
 
-    private void btngiaima1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngiaima1ActionPerformed
+    // Vòng lặp từng ký tự
+    for (int i = 0; i < text.length(); i++) {
+        char c = text.charAt(i);
+        if (Character.isLetter(c)) {
+            // Mã hóa theo Vigenère
+            int shift = key.charAt(keyIndex) - 'A';
+            char encryptedChar = (char) (((c - 'A' + shift) % 26) + 'A');
+            result.append(encryptedChar);
+
+            // Dịch vị trí khóa
+            keyIndex = (keyIndex + 1) % key.length();
+        } else {
+            result.append(c);
+        }
+    }
+        // Hiển thị kết quả ra ô kết quả
+    txtmahoaVeg.setText(result.toString());
+    }//GEN-LAST:event_btnmahoaVegActionPerformed
+
+    private void btngiaimaVegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngiaimaVegActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btngiaima1ActionPerformed
+    // Lấy dữ liệu từ giao diện
+    String text = txtmahoaVeg.getText().toUpperCase();
+    String key = txtkhoaVeg.getText().toUpperCase();
+    StringBuilder result = new StringBuilder();
 
-    private void txtvanban1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtvanban1ActionPerformed
+    // Kiểm tra nếu thiếu dữ liệu
+    if (text.isEmpty() || key.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Vui lòng nhập văn bản và khóa!");
+        return;
+    }
+
+    int keyIndex = 0;
+
+    // Vòng lặp giải mã từng ký tự
+    for (int i = 0; i < text.length(); i++) {
+        char c = text.charAt(i);
+        if (Character.isLetter(c)) {
+            int shift = key.charAt(keyIndex) - 'A';
+            char decryptedChar = (char) (((c - 'A' - shift + 26) % 26) + 'A');
+            result.append(decryptedChar);
+            keyIndex = (keyIndex + 1) % key.length();
+        } else {
+            result.append(c);
+        }
+    }
+
+    // Hiển thị kết quả ra ô kết quả
+    txtvanbanVeg.setText(result.toString());
+    }//GEN-LAST:event_btngiaimaVegActionPerformed
+
+    private void txtvanbanVegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtvanbanVegActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtvanban1ActionPerformed
+    }//GEN-LAST:event_txtvanbanVegActionPerformed
 
-    private void txtmahoa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmahoa1ActionPerformed
+    private void txtmahoaVegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmahoaVegActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtmahoa1ActionPerformed
+    }//GEN-LAST:event_txtmahoaVegActionPerformed
 
+    private void btnRandomKeyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRandomKeyActionPerformed
+        // TODO add your handling code here:
+            // Độ dài khóa ngẫu nhiên (5–10 ký tự)
+    int length = (int)(Math.random() * 6) + 5;  // từ 5 đến 10
+    StringBuilder randomKey = new StringBuilder();
+
+    // Sinh các ký tự A–Z ngẫu nhiên
+    for (int i = 0; i < length; i++) {
+        char randomChar = (char) ('A' + (int)(Math.random() * 26));
+        randomKey.append(randomChar);
+    }
+
+    // Hiển thị vào ô nhập khóa
+    txtkhoaVeg.setText(randomKey.toString());
+        
+    }//GEN-LAST:event_btnRandomKeyActionPerformed
+
+    
+    
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -320,10 +415,11 @@ private String mahoa(String br, int k)
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnRandomKey;
     private javax.swing.JButton btngiaima;
-    private javax.swing.JButton btngiaima1;
+    private javax.swing.JButton btngiaimaVeg;
     private javax.swing.JButton btnmahoa;
-    private javax.swing.JButton btnmahoa1;
+    private javax.swing.JButton btnmahoaVeg;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -337,10 +433,10 @@ private String mahoa(String br, int k)
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField txtkhoa;
-    private javax.swing.JTextField txtkhoa1;
+    private javax.swing.JTextField txtkhoaVeg;
     private javax.swing.JTextField txtmahoa;
-    private javax.swing.JTextField txtmahoa1;
+    private javax.swing.JTextField txtmahoaVeg;
     private javax.swing.JTextField txtvanban;
-    private javax.swing.JTextField txtvanban1;
+    private javax.swing.JTextField txtvanbanVeg;
     // End of variables declaration//GEN-END:variables
 }
