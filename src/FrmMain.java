@@ -33,29 +33,59 @@ public class FrmMain extends javax.swing.JFrame {
 
         jSpinner1 = new javax.swing.JSpinner();
         jTextField1 = new javax.swing.JTextField();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        MaHoaCoDien = new javax.swing.JTabbedPane();
+        Caesar = new javax.swing.JPanel();
         btnmahoa = new javax.swing.JButton();
         btngiaima = new javax.swing.JButton();
         txtmahoa = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        TextVanBanCaesar = new javax.swing.JLabel();
+        TextKhoaCaesar = new javax.swing.JLabel();
+        TextMaHoaCaesar = new javax.swing.JLabel();
         txtkhoa = new javax.swing.JTextField();
         txtvanban = new javax.swing.JTextField();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        btnXoaCeasar = new javax.swing.JButton();
+        Vigenere = new javax.swing.JPanel();
+        MainPanelVigenere = new javax.swing.JPanel();
         btnmahoaVeg = new javax.swing.JButton();
         btngiaimaVeg = new javax.swing.JButton();
         txtmahoaVeg = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        TextVanBanVigenere = new javax.swing.JLabel();
+        TextKhoaVigenere = new javax.swing.JLabel();
+        TextBanMaVigenere = new javax.swing.JLabel();
         txtkhoaVeg = new javax.swing.JTextField();
         txtvanbanVeg = new javax.swing.JTextField();
         btnRandomKey = new javax.swing.JButton();
+        btnXoaVigenere = new javax.swing.JButton();
+        ChuyenDichDong = new javax.swing.JPanel();
+        MainPanelDichDong = new javax.swing.JPanel();
+        TextNhapChuoiDichDong = new javax.swing.JLabel();
+        txtChuoiDichDong = new javax.swing.JTextField();
+        TextKetQuaDichDong = new javax.swing.JLabel();
+        txtKhoaDichDong = new javax.swing.JTextField();
+        TextKeyDichDong = new javax.swing.JLabel();
+        txtKetQuaDichDong = new javax.swing.JTextField();
+        btnMahoaDichDong = new javax.swing.JButton();
+        btnGiaiMaDichDong = new javax.swing.JButton();
+        btnXoaDichDong = new javax.swing.JButton();
+        BangChuDon = new javax.swing.JPanel();
+        MainPanelChuDon = new javax.swing.JPanel();
+        TextNhapChuoiChuDon = new javax.swing.JLabel();
+        TextKetQuaChuDon = new javax.swing.JLabel();
+        txtNhapChuDon = new javax.swing.JTextField();
+        txtKetQuaChuDon = new javax.swing.JTextField();
+        TextKey = new javax.swing.JLabel();
+        txtKeyChuDon = new javax.swing.JTextField();
+        btnRandomChuDon = new javax.swing.JButton();
+        btnMaHoaChuDon = new javax.swing.JButton();
+        btnGiaiMaChuDon = new javax.swing.JButton();
+        btnXoaChuDon = new javax.swing.JButton();
+        TextCheck = new javax.swing.JLabel();
+        TextCheckKey = new javax.swing.JLabel();
 
         jTextField1.setText("jTextField1");
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -73,11 +103,17 @@ public class FrmMain extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Văn Bản : ");
+        TextVanBanCaesar.setText("Văn Bản : ");
 
-        jLabel3.setText("Khóa :");
+        TextKhoaCaesar.setText("Khóa :");
 
-        jLabel4.setText("Mã Hóa :");
+        TextMaHoaCaesar.setText("Mã Hóa :");
+
+        txtkhoa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtkhoaActionPerformed(evt);
+            }
+        });
 
         txtvanban.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,49 +121,69 @@ public class FrmMain extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+        btnXoaCeasar.setText("Xóa");
+        btnXoaCeasar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnXoaCeasarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout CaesarLayout = new javax.swing.GroupLayout(Caesar);
+        Caesar.setLayout(CaesarLayout);
+        CaesarLayout.setHorizontalGroup(
+            CaesarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CaesarLayout.createSequentialGroup()
+                .addContainerGap(157, Short.MAX_VALUE)
+                .addGroup(CaesarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CaesarLayout.createSequentialGroup()
+                        .addComponent(TextMaHoaCaesar, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21)
+                        .addGroup(CaesarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(CaesarLayout.createSequentialGroup()
+                                .addComponent(btngiaima)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnXoaCeasar))
+                            .addComponent(txtmahoa, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(CaesarLayout.createSequentialGroup()
+                        .addComponent(TextVanBanCaesar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtvanban, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtmahoa, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtkhoa, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtvanban, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(CaesarLayout.createSequentialGroup()
+                        .addComponent(TextKhoaCaesar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
+                        .addGroup(CaesarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnmahoa)
-                            .addComponent(btngiaima))))
-                .addContainerGap(52, Short.MAX_VALUE))
+                            .addComponent(txtkhoa, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(179, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        CaesarLayout.setVerticalGroup(
+            CaesarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CaesarLayout.createSequentialGroup()
                 .addGap(49, 49, 49)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(txtvanban, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtkhoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGroup(CaesarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(CaesarLayout.createSequentialGroup()
+                        .addComponent(txtvanban, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(58, 58, 58))
+                    .addGroup(CaesarLayout.createSequentialGroup()
+                        .addComponent(TextVanBanCaesar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(CaesarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtkhoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TextKhoaCaesar))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnmahoa)
                 .addGap(13, 13, 13)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtmahoa, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(CaesarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtmahoa, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TextMaHoaCaesar))
                 .addGap(18, 18, 18)
-                .addComponent(btngiaima)
-                .addGap(0, 100, Short.MAX_VALUE))
+                .addGroup(CaesarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btngiaima)
+                    .addComponent(btnXoaCeasar))
+                .addGap(0, 131, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Caesar", jPanel1);
+        MaHoaCoDien.addTab("Caesar", Caesar);
 
         btnmahoaVeg.setText("Mã Hóa");
         btnmahoaVeg.addActionListener(new java.awt.event.ActionListener() {
@@ -149,11 +205,11 @@ public class FrmMain extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setText("Văn Bản : ");
+        TextVanBanVigenere.setText("Văn Bản : ");
 
-        jLabel6.setText("Khóa :");
+        TextKhoaVigenere.setText("Khóa :");
 
-        jLabel7.setText("Bản Mã :");
+        TextBanMaVigenere.setText("Bản Mã :");
 
         txtvanbanVeg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,90 +224,790 @@ public class FrmMain extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        btnXoaVigenere.setText("Xóa");
+        btnXoaVigenere.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnXoaVigenereActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout MainPanelVigenereLayout = new javax.swing.GroupLayout(MainPanelVigenere);
+        MainPanelVigenere.setLayout(MainPanelVigenereLayout);
+        MainPanelVigenereLayout.setHorizontalGroup(
+            MainPanelVigenereLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MainPanelVigenereLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(MainPanelVigenereLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(TextKhoaVigenere, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TextVanBanVigenere, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(MainPanelVigenereLayout.createSequentialGroup()
+                        .addComponent(TextBanMaVigenere, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtvanbanVeg, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(txtkhoaVeg, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnRandomKey))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(MainPanelVigenereLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(MainPanelVigenereLayout.createSequentialGroup()
                                 .addComponent(btngiaimaVeg)
                                 .addGap(29, 29, 29)
-                                .addComponent(btnmahoaVeg))
-                            .addComponent(txtmahoaVeg, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(18, Short.MAX_VALUE))
+                                .addComponent(btnmahoaVeg)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnXoaVigenere))
+                            .addGroup(MainPanelVigenereLayout.createSequentialGroup()
+                                .addGroup(MainPanelVigenereLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtvanbanVeg, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(MainPanelVigenereLayout.createSequentialGroup()
+                                        .addComponent(txtkhoaVeg, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnRandomKey))
+                                    .addComponent(txtmahoaVeg, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        MainPanelVigenereLayout.setVerticalGroup(
+            MainPanelVigenereLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MainPanelVigenereLayout.createSequentialGroup()
                 .addGap(49, 49, 49)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
+                .addGroup(MainPanelVigenereLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(TextVanBanVigenere)
                     .addComponent(txtvanbanVeg, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
+                .addGroup(MainPanelVigenereLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TextKhoaVigenere)
                     .addComponent(txtkhoaVeg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnRandomKey))
                 .addGap(29, 29, 29)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(MainPanelVigenereLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtmahoaVeg, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
+                    .addComponent(TextBanMaVigenere))
                 .addGap(32, 32, 32)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(MainPanelVigenereLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btngiaimaVeg)
-                    .addComponent(btnmahoaVeg))
+                    .addComponent(btnmahoaVeg)
+                    .addComponent(btnXoaVigenere))
                 .addGap(0, 110, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+        javax.swing.GroupLayout VigenereLayout = new javax.swing.GroupLayout(Vigenere);
+        Vigenere.setLayout(VigenereLayout);
+        VigenereLayout.setHorizontalGroup(
+            VigenereLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, VigenereLayout.createSequentialGroup()
+                .addContainerGap(153, Short.MAX_VALUE)
+                .addComponent(MainPanelVigenere, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(143, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        VigenereLayout.setVerticalGroup(
+            VigenereLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(VigenereLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MainPanelVigenere, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Vigenere", jPanel2);
+        MaHoaCoDien.addTab("Vigenere", Vigenere);
+
+        TextNhapChuoiDichDong.setText("Nhập Chuỗi :");
+
+        txtChuoiDichDong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtChuoiDichDongActionPerformed(evt);
+            }
+        });
+
+        TextKetQuaDichDong.setText("Kết Quả :");
+
+        txtKhoaDichDong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtKhoaDichDongActionPerformed(evt);
+            }
+        });
+
+        TextKeyDichDong.setText("Key :");
+
+        txtKetQuaDichDong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtKetQuaDichDongActionPerformed(evt);
+            }
+        });
+
+        btnMahoaDichDong.setText("Mã Hóa");
+        btnMahoaDichDong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMahoaDichDongActionPerformed(evt);
+            }
+        });
+
+        btnGiaiMaDichDong.setText("Giải Mã");
+        btnGiaiMaDichDong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGiaiMaDichDongActionPerformed(evt);
+            }
+        });
+
+        btnXoaDichDong.setText("Xóa");
+        btnXoaDichDong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnXoaDichDongActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout MainPanelDichDongLayout = new javax.swing.GroupLayout(MainPanelDichDong);
+        MainPanelDichDong.setLayout(MainPanelDichDongLayout);
+        MainPanelDichDongLayout.setHorizontalGroup(
+            MainPanelDichDongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MainPanelDichDongLayout.createSequentialGroup()
+                .addGroup(MainPanelDichDongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(MainPanelDichDongLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(MainPanelDichDongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(MainPanelDichDongLayout.createSequentialGroup()
+                                .addComponent(TextNhapChuoiDichDong, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtChuoiDichDong, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(MainPanelDichDongLayout.createSequentialGroup()
+                                .addComponent(TextKeyDichDong, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtKhoaDichDong, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(MainPanelDichDongLayout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(btnMahoaDichDong)
+                        .addGap(35, 35, 35)
+                        .addComponent(btnGiaiMaDichDong)
+                        .addGap(36, 36, 36)
+                        .addComponent(btnXoaDichDong))
+                    .addGroup(MainPanelDichDongLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(TextKetQuaDichDong, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtKetQuaDichDong)))
+                .addContainerGap(304, Short.MAX_VALUE))
+        );
+        MainPanelDichDongLayout.setVerticalGroup(
+            MainPanelDichDongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MainPanelDichDongLayout.createSequentialGroup()
+                .addGroup(MainPanelDichDongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MainPanelDichDongLayout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(txtChuoiDichDong, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(MainPanelDichDongLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(TextNhapChuoiDichDong)))
+                .addGap(24, 24, 24)
+                .addGroup(MainPanelDichDongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TextKeyDichDong)
+                    .addComponent(txtKhoaDichDong, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(MainPanelDichDongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MainPanelDichDongLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(TextKetQuaDichDong))
+                    .addGroup(MainPanelDichDongLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(txtKetQuaDichDong, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(43, 43, 43)
+                .addGroup(MainPanelDichDongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnMahoaDichDong)
+                    .addComponent(btnGiaiMaDichDong)
+                    .addComponent(btnXoaDichDong))
+                .addContainerGap(156, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout ChuyenDichDongLayout = new javax.swing.GroupLayout(ChuyenDichDong);
+        ChuyenDichDong.setLayout(ChuyenDichDongLayout);
+        ChuyenDichDongLayout.setHorizontalGroup(
+            ChuyenDichDongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(MainPanelDichDong, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        ChuyenDichDongLayout.setVerticalGroup(
+            ChuyenDichDongLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(MainPanelDichDong, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        MaHoaCoDien.addTab("Chuyển Dịch Dòng", ChuyenDichDong);
+
+        TextNhapChuoiChuDon.setText("Nhập Chuỗi :");
+
+        TextKetQuaChuDon.setText("Kết Quả :");
+
+        TextKey.setText("Key :");
+
+        btnRandomChuDon.setText("Random Key");
+        btnRandomChuDon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRandomChuDonActionPerformed(evt);
+            }
+        });
+
+        btnMaHoaChuDon.setText("Mã Hóa");
+        btnMaHoaChuDon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMaHoaChuDonActionPerformed(evt);
+            }
+        });
+
+        btnGiaiMaChuDon.setText("Giải Mã");
+        btnGiaiMaChuDon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGiaiMaChuDonActionPerformed(evt);
+            }
+        });
+
+        btnXoaChuDon.setText("Xóa");
+        btnXoaChuDon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnXoaChuDonActionPerformed(evt);
+            }
+        });
+
+        TextCheck.setText("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+
+        TextCheckKey.setText("Check Key :");
+
+        javax.swing.GroupLayout MainPanelChuDonLayout = new javax.swing.GroupLayout(MainPanelChuDon);
+        MainPanelChuDon.setLayout(MainPanelChuDonLayout);
+        MainPanelChuDonLayout.setHorizontalGroup(
+            MainPanelChuDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MainPanelChuDonLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(MainPanelChuDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MainPanelChuDonLayout.createSequentialGroup()
+                        .addComponent(btnMaHoaChuDon)
+                        .addGap(33, 33, 33)
+                        .addComponent(btnGiaiMaChuDon)
+                        .addGap(38, 38, 38)
+                        .addComponent(btnXoaChuDon)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(MainPanelChuDonLayout.createSequentialGroup()
+                        .addGroup(MainPanelChuDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TextNhapChuoiChuDon, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(MainPanelChuDonLayout.createSequentialGroup()
+                                .addGroup(MainPanelChuDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(MainPanelChuDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtNhapChuDon, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
+                                        .addComponent(txtKetQuaChuDon))
+                                    .addComponent(TextKetQuaChuDon, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(MainPanelChuDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(MainPanelChuDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(MainPanelChuDonLayout.createSequentialGroup()
+                                            .addGap(86, 86, 86)
+                                            .addComponent(TextKey, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(btnRandomChuDon, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(MainPanelChuDonLayout.createSequentialGroup()
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(txtKeyChuDon)))
+                                    .addGroup(MainPanelChuDonLayout.createSequentialGroup()
+                                        .addGap(12, 12, 12)
+                                        .addComponent(TextCheckKey, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(TextCheck, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(15, 27, Short.MAX_VALUE))))
+        );
+        MainPanelChuDonLayout.setVerticalGroup(
+            MainPanelChuDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MainPanelChuDonLayout.createSequentialGroup()
+                .addGroup(MainPanelChuDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MainPanelChuDonLayout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(TextNhapChuoiChuDon)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtNhapChuDon, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(TextKetQuaChuDon)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtKetQuaChuDon, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(MainPanelChuDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnMaHoaChuDon)
+                            .addComponent(btnGiaiMaChuDon)
+                            .addComponent(btnXoaChuDon)))
+                    .addGroup(MainPanelChuDonLayout.createSequentialGroup()
+                        .addGap(101, 101, 101)
+                        .addGroup(MainPanelChuDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(TextKey, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnRandomChuDon))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtKeyChuDon, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(MainPanelChuDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(TextCheck, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TextCheckKey))))
+                .addContainerGap(124, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout BangChuDonLayout = new javax.swing.GroupLayout(BangChuDon);
+        BangChuDon.setLayout(BangChuDonLayout);
+        BangChuDonLayout.setHorizontalGroup(
+            BangChuDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(MainPanelChuDon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        BangChuDonLayout.setVerticalGroup(
+            BangChuDonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BangChuDonLayout.createSequentialGroup()
+                .addComponent(MainPanelChuDon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        MaHoaCoDien.addTab("Bảng Chữ Đơn", BangChuDon);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(MaHoaCoDien))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
-                .addContainerGap())
+                .addComponent(MaHoaCoDien))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnRandomKeyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRandomKeyActionPerformed
+        // TODO add your handling code here:
+        // Độ dài khóa ngẫu nhiên (5–10 ký tự)
+        int length = (int)(Math.random() * 6) + 5;  // từ 5 đến 10
+        StringBuilder randomKey = new StringBuilder();
+
+        // Sinh các ký tự A–Z ngẫu nhiên
+        for (int i = 0; i < length; i++) {
+            char randomChar = (char) ('A' + (int)(Math.random() * 26));
+            randomKey.append(randomChar);
+        }
+
+        // Hiển thị vào ô nhập khóa
+        txtkhoaVeg.setText(randomKey.toString());
+
+    }//GEN-LAST:event_btnRandomKeyActionPerformed
+
+    private void txtvanbanVegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtvanbanVegActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtvanbanVegActionPerformed
+
+    private void txtmahoaVegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmahoaVegActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtmahoaVegActionPerformed
+
+    private void btngiaimaVegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngiaimaVegActionPerformed
+        // TODO add your handling code here:
+        // Lấy dữ liệu từ giao diện
+        String text = txtmahoaVeg.getText().toUpperCase();
+        String key = txtkhoaVeg.getText().toUpperCase();
+        StringBuilder result = new StringBuilder();
+
+        // Kiểm tra nếu thiếu dữ liệu
+        if (text.isEmpty() || key.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Vui lòng nhập văn bản và khóa!");
+            return;
+        }
+
+        int keyIndex = 0;
+
+        // Vòng lặp giải mã từng ký tự
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
+            if (Character.isLetter(c)) {
+                int shift = key.charAt(keyIndex) - 'A';
+                char decryptedChar = (char) (((c - 'A' - shift + 26) % 26) + 'A');
+                result.append(decryptedChar);
+                keyIndex = (keyIndex + 1) % key.length();
+            } else {
+                result.append(c);
+            }
+        }
+
+        // Hiển thị kết quả ra ô kết quả
+        txtvanbanVeg.setText(result.toString());
+    }//GEN-LAST:event_btngiaimaVegActionPerformed
+
+    // Vigenere
+    private void btnmahoaVegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmahoaVegActionPerformed
+        // TODO add your handling code here:
+        // Lấy dữ liệu từ giao diện
+        String text = txtvanbanVeg.getText().toUpperCase();
+        String key = txtkhoaVeg.getText().toUpperCase();
+        StringBuilder result = new StringBuilder();
+
+        // Nếu người dùng chưa nhập đủ
+        if (text.isEmpty() || key.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Vui lòng nhập văn bản và khóa!");
+            return;
+        }
+
+        // Biến đếm vị trí ký tự khóa
+        int keyIndex = 0;
+
+        // Vòng lặp từng ký tự
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
+            if (Character.isLetter(c)) {
+                // Mã hóa theo Vigenère
+                int shift = key.charAt(keyIndex) - 'A';
+                char encryptedChar = (char) (((c - 'A' + shift) % 26) + 'A');
+                result.append(encryptedChar);
+
+                // Dịch vị trí khóa
+                keyIndex = (keyIndex + 1) % key.length();
+            } else {
+                result.append(c);
+            }
+        }
+        // Hiển thị kết quả ra ô kết quả
+        txtmahoaVeg.setText(result.toString());
+    }//GEN-LAST:event_btnmahoaVegActionPerformed
+
+    private void txtvanbanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtvanbanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtvanbanActionPerformed
+
+    private void btngiaimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngiaimaActionPerformed
+        // TODO add your handling code here:
+        int k =Integer.valueOf(this.txtkhoa.getText());
+        String br = this.txtmahoa.getText();
+        this.txtvanban.setText(mahoa(br,-k));
+    }//GEN-LAST:event_btngiaimaActionPerformed
+
+    private void btnmahoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmahoaActionPerformed
+        // TODO add your handling code here:
+        if(txtkhoa.getText().equals("")== true)
+        JOptionPane.showMessageDialog(null,"Vui lòng nhập khóa, Làm ơn!!!");
+        else
+        {
+            int k = Integer.valueOf(this.txtkhoa.getText());
+            String br = this.txtvanban.getText();
+            this.txtmahoa.setText(mahoa(br,k));
+        }
+    }//GEN-LAST:event_btnmahoaActionPerformed
+
+    private void txtkhoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtkhoaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtkhoaActionPerformed
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //                                   Chuyển Dịch Dòng
+    
+    private void txtChuoiDichDongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtChuoiDichDongActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtChuoiDichDongActionPerformed
+
+    private void txtKhoaDichDongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKhoaDichDongActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtKhoaDichDongActionPerformed
+
+    private void txtKetQuaDichDongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKetQuaDichDongActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_txtKetQuaDichDongActionPerformed
+
+    private void btnMahoaDichDongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMahoaDichDongActionPerformed
+    // Lấy dữ liệu từ textfield
+    String input = txtChuoiDichDong.getText();
+    String key = txtKhoaDichDong.getText();
+
+    // Kiểm tra dữ liệu đầu vào
+    if (input.isEmpty() || key.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Vui lòng nhập đầy đủ chuỗi và khóa!");
+        return;
+    }
+
+    // Gọi hàm mã hóa
+    String result = encryptRow(input, key);
+    txtKetQuaDichDong.setText(result);
+                                      
+    }//GEN-LAST:event_btnMahoaDichDongActionPerformed
+
+    private void btnGiaiMaDichDongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGiaiMaDichDongActionPerformed
+        // TODO add your handling code here:
+         // Lấy dữ liệu từ textfield
+    String input = txtChuoiDichDong.getText();
+    String key = txtKhoaDichDong.getText();
+
+    // Kiểm tra dữ liệu đầu vào
+    if (input.isEmpty() || key.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Vui lòng nhập đầy đủ chuỗi và khóa!");
+        return;
+}
+        // Gọi hàm giải mã
+    String result = decryptRow(input, key);
+    txtKetQuaDichDong.setText(result);
+    }//GEN-LAST:event_btnGiaiMaDichDongActionPerformed
+
+    private void btnXoaDichDongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaDichDongActionPerformed
+        // TODO add your handling code here:
+    txtChuoiDichDong.setText("");
+    txtKhoaDichDong.setText("");
+    txtKetQuaDichDong.setText("");
+    txtChuoiDichDong.requestFocus();
+    }//GEN-LAST:event_btnXoaDichDongActionPerformed
+
+    
+// xóa caesar
+    private void btnXoaCeasarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaCeasarActionPerformed
+        // TODO add your handling code here:
+        txtvanban.setText("");
+        txtmahoa.setText("");
+        txtkhoa.setText("");
+        txtvanban.requestFocus();
+    }//GEN-LAST:event_btnXoaCeasarActionPerformed
+// xóa vigenere
+    private void btnXoaVigenereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaVigenereActionPerformed
+        // TODO add your handling code here:
+        txtvanbanVeg.setText("");
+        txtmahoaVeg.setText("");
+        txtkhoaVeg.setText("");
+        txtvanbanVeg.requestFocus();
+    }//GEN-LAST:event_btnXoaVigenereActionPerformed
+
+   
+    //                              Bảng Chữ Đơn
+    
+    
+    private void btnMaHoaChuDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMaHoaChuDonActionPerformed
+        // TODO add your handling code here:
+    // Lấy dữ liệu đầu vào từ giao diện
+    String plaintext = txtNhapChuDon.getText().toUpperCase().replaceAll("[^A-Z]", "");
+    String key = txtKeyChuDon.getText().toUpperCase().replaceAll("[^A-Z]", "");
+    
+    // Kiểm tra khóa hợp lệ: phải có 26 ký tự khác nhau
+    if (key.length() != 26) {
+        JOptionPane.showMessageDialog(this, "Khóa phải chứa đủ 26 ký tự A-Z, không trùng lặp!", "Lỗi khóa", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
+
+    // Bảng chữ cái chuẩn
+    String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    StringBuilder cipher = new StringBuilder();
+
+    // Thực hiện mã hóa
+    for (int i = 0; i < plaintext.length(); i++) {
+        char ch = plaintext.charAt(i);
+        int index = alphabet.indexOf(ch);
+        if (index != -1) {
+            cipher.append(key.charAt(index)); // thay bằng ký tự tương ứng trong khóa
+        } else {
+            cipher.append(ch); // nếu không phải chữ cái, giữ nguyên
+        }
+    }
+
+    // Hiển thị kết quả ra ô kết quả
+    txtKetQuaChuDon.setText(cipher.toString());        
+        
+    }//GEN-LAST:event_btnMaHoaChuDonActionPerformed
+
+    private void btnGiaiMaChuDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGiaiMaChuDonActionPerformed
+        // TODO add your handling code here:
+            // Lấy dữ liệu đầu vào từ giao diện
+    String cipher = txtNhapChuDon.getText().toUpperCase().replaceAll("[^A-Z]", "");
+    String key = txtKeyChuDon.getText().toUpperCase().replaceAll("[^A-Z]", "");
+    
+    // Kiểm tra khóa hợp lệ: phải có 26 ký tự khác nhau
+    if (key.length() != 26) {
+        JOptionPane.showMessageDialog(this, "Khóa phải chứa đủ 26 ký tự A-Z, không trùng lặp!", "Lỗi khóa", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
+
+    // Bảng chữ cái chuẩn
+    String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    StringBuilder plaintext = new StringBuilder();
+
+    // Thực hiện giải mã: tìm ngược từ khóa về chữ cái gốc
+    for (int i = 0; i < cipher.length(); i++) {
+        char ch = cipher.charAt(i);
+        int index = key.indexOf(ch); // tìm vị trí của ký tự trong khóa
+        if (index != -1) {
+            plaintext.append(alphabet.charAt(index)); // đổi về chữ cái chuẩn
+        } else {
+            plaintext.append(ch); // nếu không phải chữ cái, giữ nguyên
+        }
+    }
+
+    // Hiển thị kết quả
+    txtKetQuaChuDon.setText(plaintext.toString());
+    }//GEN-LAST:event_btnGiaiMaChuDonActionPerformed
+
+    private void btnXoaChuDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXoaChuDonActionPerformed
+        // TODO add your handling code here:
+            // Xóa nội dung trong các ô nhập và kết quả
+    txtNhapChuDon.setText("");
+    txtKeyChuDon.setText("");
+    txtKetQuaChuDon.setText("");
+    
+    // Đưa con trỏ chuột về ô nhập đầu tiên cho tiện
+    txtNhapChuDon.requestFocus();
+    }//GEN-LAST:event_btnXoaChuDonActionPerformed
+
+    private void btnRandomChuDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRandomChuDonActionPerformed
+        // TODO add your handling code here:
+            // Tạo danh sách các ký tự từ A-Z
+    java.util.List<Character> letters = new java.util.ArrayList<>();
+    for (char c = 'A'; c <= 'Z'; c++) {
+        letters.add(c);
+    }
+    
+    // Trộn ngẫu nhiên danh sách ký tự
+    java.util.Collections.shuffle(letters);
+    
+    // Ghép các ký tự lại thành chuỗi khóa
+    StringBuilder randomKey = new StringBuilder();
+    for (char c : letters) {
+        randomKey.append(c);
+    }
+    
+    // Gán khóa ngẫu nhiên vào ô txtKeyChuDon
+    txtKeyChuDon.setText(randomKey.toString());
+    }//GEN-LAST:event_btnRandomChuDonActionPerformed
+// Bảng chữ đơn hết ở dây    
+    //                                           Chuyển Dịch Dòng
+// CHUYỂN DỊCH THEO HÀNG - CỘT)
+
+private String encryptRow(String text, String key) {
+    // --- Chuẩn hóa dữ liệu đầu vào ---
+    text = text.replaceAll("\\s+", "").toUpperCase();  // Xóa khoảng trắng, chỉ giữ chữ cái
+    key = key.toUpperCase();                           // Chuyển khóa sang in hoa
+
+    int col = key.length();                            // Số cột = độ dài khóa
+    int row = (int) Math.ceil((double) text.length() / col); // Số hàng (làm tròn lên)
+
+    //Tạo bảng để điền plaintext 
+    char[][] table = new char[row][col];
+    int k = 0;
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            if (k < text.length()) {
+                table[i][j] = text.charAt(k++);        // Điền từng ký tự của văn bản gốc
+            } else {
+                table[i][j] = 'X';                     // Nếu hết ký tự thì điền 'X'
+            }
+        }
+    }
+
+    //  Xác định thứ tự sắp xếp các cột theo khóa 
+    int[] order = new int[col];
+    for (int i = 0; i < col; i++) order[i] = i;
+
+    // Sắp xếp theo thứ tự chữ cái của khóa
+    for (int i = 0; i < col - 1; i++) {
+        for (int j = i + 1; j < col; j++) {
+            if (key.charAt(order[j]) < key.charAt(order[i])) {
+                int tmp = order[i];
+                order[i] = order[j];
+                order[j] = tmp;
+            }
+        }
+    }
+
+    // Đọc theo cột theo thứ tự đã sắp xếp để tạo cipher 
+    StringBuilder result = new StringBuilder();
+    for (int x = 0; x < col; x++) {
+        int n = order[x];               // Lấy vị trí cột theo khóa
+        for (int i = 0; i < row; i++) {
+            result.append(table[i][n]); // Đọc từng ký tự trong cột
+        }
+    }
+
+    return result.toString();
+}
+//CHUYỂN DỊCH THEO HÀNG - CỘT)
+
+private String decryptRow(String cipher, String key) {
+    //Chuẩn hóa dữ liệu đầu vào 
+    cipher = cipher.replaceAll("\\s+", "").toUpperCase(); // Xóa khoảng trắng
+    key = key.toUpperCase();                              // Chuyển khóa sang in hoa
+
+    int col = key.length();                               // Số cột = độ dài khóa
+    int row = (int) Math.ceil((double) cipher.length() / col); // Số hàng
+
+    // Tạo thứ tự cột giống phần mã hóa
+    int[] order = new int[col];
+    for (int i = 0; i < col; i++) order[i] = i;
+
+    // Sắp xếp cột theo thứ tự ký tự trong khóa
+    for (int i = 0; i < col - 1; i++) {
+        for (int j = i + 1; j < col; j++) {
+            if (key.charAt(order[j]) < key.charAt(order[i])) {
+                int tmp = order[i];
+                order[i] = order[j];
+                order[j] = tmp;
+            }
+        }
+    }
+
+    // Điền cipher vào bảng theo thứ tự cột đã sắp xếp
+    char[][] table = new char[row][col];
+    int k = 0;
+    for (int n = 0; n < col; n++) {
+        int j = order[n]; // vị trí cột trong bảng
+        for (int i = 0; i < row; i++) {
+            if (k < cipher.length()) {
+                table[i][j] = cipher.charAt(k++); // điền ký tự vào cột tương ứng
+            }
+        }
+    }
+
+    //  Đọc từng hàng để thu được plaintext 
+    StringBuilder result = new StringBuilder();
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            result.append(table[i][j]);
+        }
+    }
+
+    return result.toString();
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     // Caesar
 // Phương thức Mã Hóa từng ký tự với khóa K
 char mahoakt(char c, int k)
@@ -268,123 +1024,7 @@ private String mahoa(String br, int k)
     for(int i =0; i< n; i++)
         kq+= mahoakt(br.charAt(i),k);
                 return kq;      
-}
-    private void btnmahoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmahoaActionPerformed
-        // TODO add your handling code here:
-                if(txtkhoa.getText().equals("")== true)
-                    JOptionPane.showMessageDialog(null,"Vui lòng nhập khóa, Làm ơn!!!");
-        else 
-        {
-            int k = Integer.valueOf(this.txtkhoa.getText());
-            String br = this.txtvanban.getText();
-            this.txtmahoa.setText(mahoa(br,k));
-        }                          
-    }//GEN-LAST:event_btnmahoaActionPerformed
-
-    private void txtvanbanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtvanbanActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtvanbanActionPerformed
-
-    private void btngiaimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngiaimaActionPerformed
-        // TODO add your handling code here:
-        int k =Integer.valueOf(this.txtkhoa.getText());
-        String br = this.txtmahoa.getText();
-        this.txtvanban.setText(mahoa(br,-k));      
-    }//GEN-LAST:event_btngiaimaActionPerformed
-    
-    // Vigenere
-    private void btnmahoaVegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmahoaVegActionPerformed
-        // TODO add your handling code here:
-         // Lấy dữ liệu từ giao diện
-    String text = txtvanbanVeg.getText().toUpperCase();
-    String key = txtkhoaVeg.getText().toUpperCase();
-    StringBuilder result = new StringBuilder();
-    
-    // Nếu người dùng chưa nhập đủ
-    if (text.isEmpty() || key.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Vui lòng nhập văn bản và khóa!");
-        return;
-    }
-    
-      // Biến đếm vị trí ký tự khóa
-    int keyIndex = 0;
-
-    // Vòng lặp từng ký tự
-    for (int i = 0; i < text.length(); i++) {
-        char c = text.charAt(i);
-        if (Character.isLetter(c)) {
-            // Mã hóa theo Vigenère
-            int shift = key.charAt(keyIndex) - 'A';
-            char encryptedChar = (char) (((c - 'A' + shift) % 26) + 'A');
-            result.append(encryptedChar);
-
-            // Dịch vị trí khóa
-            keyIndex = (keyIndex + 1) % key.length();
-        } else {
-            result.append(c);
-        }
-    }
-        // Hiển thị kết quả ra ô kết quả
-    txtmahoaVeg.setText(result.toString());
-    }//GEN-LAST:event_btnmahoaVegActionPerformed
-
-    private void btngiaimaVegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngiaimaVegActionPerformed
-        // TODO add your handling code here:
-    // Lấy dữ liệu từ giao diện
-    String text = txtmahoaVeg.getText().toUpperCase();
-    String key = txtkhoaVeg.getText().toUpperCase();
-    StringBuilder result = new StringBuilder();
-
-    // Kiểm tra nếu thiếu dữ liệu
-    if (text.isEmpty() || key.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Vui lòng nhập văn bản và khóa!");
-        return;
-    }
-
-    int keyIndex = 0;
-
-    // Vòng lặp giải mã từng ký tự
-    for (int i = 0; i < text.length(); i++) {
-        char c = text.charAt(i);
-        if (Character.isLetter(c)) {
-            int shift = key.charAt(keyIndex) - 'A';
-            char decryptedChar = (char) (((c - 'A' - shift + 26) % 26) + 'A');
-            result.append(decryptedChar);
-            keyIndex = (keyIndex + 1) % key.length();
-        } else {
-            result.append(c);
-        }
-    }
-
-    // Hiển thị kết quả ra ô kết quả
-    txtvanbanVeg.setText(result.toString());
-    }//GEN-LAST:event_btngiaimaVegActionPerformed
-
-    private void txtvanbanVegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtvanbanVegActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtvanbanVegActionPerformed
-
-    private void txtmahoaVegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmahoaVegActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtmahoaVegActionPerformed
-
-    private void btnRandomKeyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRandomKeyActionPerformed
-        // TODO add your handling code here:
-            // Độ dài khóa ngẫu nhiên (5–10 ký tự)
-    int length = (int)(Math.random() * 6) + 5;  // từ 5 đến 10
-    StringBuilder randomKey = new StringBuilder();
-
-    // Sinh các ký tự A–Z ngẫu nhiên
-    for (int i = 0; i < length; i++) {
-        char randomChar = (char) ('A' + (int)(Math.random() * 26));
-        randomKey.append(randomChar);
-    }
-
-    // Hiển thị vào ô nhập khóa
-    txtkhoaVeg.setText(randomKey.toString());
-        
-    }//GEN-LAST:event_btnRandomKeyActionPerformed
-
+}    
     
     
     
@@ -415,23 +1055,51 @@ private String mahoa(String br, int k)
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel BangChuDon;
+    private javax.swing.JPanel Caesar;
+    private javax.swing.JPanel ChuyenDichDong;
+    private javax.swing.JTabbedPane MaHoaCoDien;
+    private javax.swing.JPanel MainPanelChuDon;
+    private javax.swing.JPanel MainPanelDichDong;
+    private javax.swing.JPanel MainPanelVigenere;
+    private javax.swing.JLabel TextBanMaVigenere;
+    private javax.swing.JLabel TextCheck;
+    private javax.swing.JLabel TextCheckKey;
+    private javax.swing.JLabel TextKetQuaChuDon;
+    private javax.swing.JLabel TextKetQuaDichDong;
+    private javax.swing.JLabel TextKey;
+    private javax.swing.JLabel TextKeyDichDong;
+    private javax.swing.JLabel TextKhoaCaesar;
+    private javax.swing.JLabel TextKhoaVigenere;
+    private javax.swing.JLabel TextMaHoaCaesar;
+    private javax.swing.JLabel TextNhapChuoiChuDon;
+    private javax.swing.JLabel TextNhapChuoiDichDong;
+    private javax.swing.JLabel TextVanBanCaesar;
+    private javax.swing.JLabel TextVanBanVigenere;
+    private javax.swing.JPanel Vigenere;
+    private javax.swing.JButton btnGiaiMaChuDon;
+    private javax.swing.JButton btnGiaiMaDichDong;
+    private javax.swing.JButton btnMaHoaChuDon;
+    private javax.swing.JButton btnMahoaDichDong;
+    private javax.swing.JButton btnRandomChuDon;
     private javax.swing.JButton btnRandomKey;
+    private javax.swing.JButton btnXoaCeasar;
+    private javax.swing.JButton btnXoaChuDon;
+    private javax.swing.JButton btnXoaDichDong;
+    private javax.swing.JButton btnXoaVigenere;
     private javax.swing.JButton btngiaima;
     private javax.swing.JButton btngiaimaVeg;
     private javax.swing.JButton btnmahoa;
     private javax.swing.JButton btnmahoaVeg;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JButton jButton1;
     private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txtChuoiDichDong;
+    private javax.swing.JTextField txtKetQuaChuDon;
+    private javax.swing.JTextField txtKetQuaDichDong;
+    private javax.swing.JTextField txtKeyChuDon;
+    private javax.swing.JTextField txtKhoaDichDong;
+    private javax.swing.JTextField txtNhapChuDon;
     private javax.swing.JTextField txtkhoa;
     private javax.swing.JTextField txtkhoaVeg;
     private javax.swing.JTextField txtmahoa;
